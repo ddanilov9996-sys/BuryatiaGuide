@@ -1,0 +1,24 @@
+{
+  "name": "Бурятия — путеводитель BuryatiaGuide",
+  "short_name": "Бурятия Гид",
+  "description": "Карта, поиск мест и путеводитель по Республике Бурятия",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f7f2",
+  "theme_color": "#174f36",
+  "icons": [
+    {
+      "src": "favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

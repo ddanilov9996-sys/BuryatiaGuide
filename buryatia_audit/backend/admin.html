@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Администрирование — Бурятия Гид</title>
+  <link rel="stylesheet" href="/admin.css">
+  <script src="/admin.js" defer></script>
+</head>
+<body>
+  <main class="wrap">
+    <header><p class="eyebrow">БУРЯТИЯ ГИД · СЛУЖЕБНЫЙ РАЗДЕЛ</p><h1>Управление каталогом</h1><p class="muted">Здесь можно загрузить проверенный JSON-каталог организаций в API сайта.</p></header>
+    <section class="panel">
+      <h2>1. Подключение</h2>
+      <label for="token">Токен администратора</label>
+      <input id="token" type="password" autocomplete="off" placeholder="Вставьте ADMIN_TOKEN">
+      <div class="actions"><button id="load" type="button" class="secondary">Загрузить каталог с сервера</button><span id="health" class="status">Проверка API…</span></div>
+      <p class="hint">Токен хранится только в памяти открытой страницы и не записывается в браузер.</p>
+    </section>
+    <section class="panel">
+      <h2>2. Данные организаций</h2>
+      <p class="hint">Ожидается JSON-массив или объект вида <code>{"organizations": [...]}</code>. Обязательные поля каждой записи: name, district, category, source (HTTPS), checkedAt (ГГГГ-ММ-ДД).</p>
+      <textarea id="json" spellcheck="false" aria-label="JSON организаций" placeholder='{"organizations": []}'></textarea>
+      <div class="actions"><label class="file">Открыть JSON-файл<input id="file" type="file" accept="application/json,.json"></label><button id="download" type="button" class="secondary">Скачать текущий JSON</button><button id="save" type="button">Проверить и сохранить</button></div>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </section>
+    <footer>Не загружайте персональные данные жителей. Перед публикацией проверяйте источник, лицензию, адреса и телефоны. Сохранение полностью заменяет текущий каталог.</footer>
+  </main>
+</body>
+</html>
